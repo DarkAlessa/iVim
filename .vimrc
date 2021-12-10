@@ -80,7 +80,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 "================================-<< End Vundle >>====================================
 
-"=========== Hide Toolbar
+"=========== Hide gVim Toolbar
 if has("gui_running")
 	set guioptions -=m "Disable Menu bar
 	set guioptions -=T "Disable Tool bar
@@ -193,8 +193,8 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['css'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
 
 "=====================================[ ALE ]========================================
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
 let g:airline#extensions#ale#enabled = 1    " use Vim-Airline statusline with ALE.
 
 "================================[ Vim-fugitive ]====================================
@@ -210,7 +210,7 @@ let g:gitgutter_sign_removed_first_line = '‾'
 let g:gitgutter_sign_modified_removed   = '~_'
 
 "=============================[ flazz Vim-Colorschemes ]=============================
-colorscheme elsa "elsa, nord, tayra, fx, cake
+colorscheme mimic " nord, tayra, fx, cake
 
 "================================[ Powerline Font ]==================================
 set guifont=SauceCodePro\ Nerd\ Font\ Mono:h9
