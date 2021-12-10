@@ -1,57 +1,52 @@
 " .vimrc by NUKE13
 " 7 Dec 2021
 
-set nocompatible            " Disable Vi compatibility 
-filetype on                 " Filetype must be 'on' before setting it 'off'
-                            " otherwise it exits with a bad status and breaks
-                            " git commit.
-filetype off                " Vundle Plugin Required
-syntax on                   " Open highlight syntax
+set nocompatible                " Disable Vi compatibility 
+filetype on                     " Filetype must be 'on' before setting it 'off'
+                                " otherwise it exits with a bad status and breaks
+                                " git commit.
+filetype off                    " Vundle Plugin Required
+syntax on                       " Open highlight syntax
 
-set fileencoding=utf-8      " File encode
+set fileencoding=utf-8          " File encode
 set encoding=utf-8
-set number relativenumber   " Turn hybrid line numbers on
-set ruler                   " Display status line/colmun number at buttom
+set number relativenumber       " Turn hybrid line numbers on
+set ruler                       " Display status line/colmun number at buttom
 set laststatus=2
 set cursorline
-set showcmd                 " Show (partial) command in status line.
+set showcmd                     " Show (partial) command in status line.
 set showmode
-set autowrite               " Automatically save before commands like :next and :make
-set hidden                  " Hide buffers when they are abandoned
-set mouse=a                 " Enable mouse usage (all modes)
-set showmatch               " Highlight matching brace
-set visualbell              " Use visual bell (no beeping)
-set hlsearch                " Highlight all search results
-set smartcase               " Enable smart-case search
-set ignorecase              " Always case-insensitive
-set incsearch               " Searches for strings incrementally
-set autoindent              " Auto-indent new lines
-set smartindent             " Enable smart-indent
-set smarttab                " Enable smart-tabs
-set shiftwidth=4            " Number of auto-indent spaces
-set softtabstop=4           " Number of spaces per Tab
-set tabstop=4               " Number of spaces that a <Tab> in the file counts for.
-set expandtab               " In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
+set autowrite                   " Automatically save before commands like :next and :make
+set hidden                      " Hide buffers when they are abandoned
+set mouse=a                     " Enable mouse usage (all modes)
+set showmatch                   " Highlight matching brace
+set visualbell                  " Use visual bell (no beeping)
+set hlsearch                    " Highlight all search results
+set smartcase                   " Enable smart-case search
+set ignorecase                  " Always case-insensitive
+set incsearch                   " Searches for strings incrementally
+set autoindent                  " Auto-indent new lines
+set smartindent                 " Enable smart-indent
+set smarttab                    " Enable smart-tabs
+set shiftwidth=4                " Number of auto-indent spaces
+set softtabstop=4               " Number of spaces per Tab
+set tabstop=4                   " Number of spaces that a <Tab> in the file counts for.
+set expandtab                   " In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
 set backspace=indent,eol,start  " Allow backspacing over autoindent, eol and start
 set termencoding=utf-8
 set foldmethod=manual
-set lines=45 columns=140    " Window size
+set lines=45 columns=140        " Window size
 set listchars=tab:\ ,eol:
 "set shell=C:\Program\ Files\PowerShell\7\pwsh.exe
 let g:termdebug_wide = 110
 let g:termdebug_popup = 0
-hi CursorLine	cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-"==============================<< Vundle Plugins >>===================================
-"--- set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+
+"---/ Vundle Plugins
+set rtp+=~/.vim/bundle/Vundle.vim      " set the runtime path to include Vundle and initialize
 call vundle#begin()
-"--- alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+"call vundle#begin('~/some/path/here') " alternatively, pass a path where Vundle should install plugins
 
-"--- let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-"====================================[ Plugins ]======================================
+Plugin 'VundleVim/Vundle.vim'       " Let Vundle manage Vundle, required
 Plugin 'airblade/vim-gitgutter'     " Shows a git diff in the 'gutter' (sign column).
 Plugin 'scrooloose/nerdtree'        " NERDTree
 Plugin 'scrooloose/syntastic'       " Syntax checking hacks for vim
@@ -66,36 +61,34 @@ Plugin 'jiangmiao/auto-pairs'       " Insert or delete brackets, parens, quotes 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'w0rp/ale'                   " Check syntax in Vim with Language Server Protocol (LSP)
-"Plugin 'Valloric/YouCompleteMe'
-"================================[ Color and Themes ]=================================
+"---/ Color and Themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'     " use // colorscheme + name of scheme // for change scheme
 Plugin 'powerline/powerline'
 Plugin 'ryanoasis/vim-devicons'     " Icon symbols : Must install Nerd-Font
-                                    " Example : SauceCodePro NF (Recommend)
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " nerdtree-syntax-highlight
-"=====================================================================================
+
 call vundle#end()            " required
 filetype plugin indent on    " required
-"================================-<< End Vundle >>====================================
+"---/ End Vundle
 
-"=========== Hide gVim Toolbar
+"---/ Hide gVim Toolbar
 if has("gui_running")
-	set guioptions -=m "Disable Menu bar
-	set guioptions -=T "Disable Tool bar
-	set guioptions -=r "Disable Right-hand scroll bar
-	set guioptions -=L "Disable Left-hand scroll bar
-"	set guifont=SauceCodePro\ Nerd\ Font:h9
+    set guioptions -=m "Disable Menu bar
+    set guioptions -=T "Disable Tool bar
+    set guioptions -=r "Disable Right-hand scroll bar
+    set guioptions -=L "Disable Left-hand scroll bar
+    set guifont=SauceCodePro\ Nerd\ Font\ Mono:h9
 endif
 
-"===============================<< Ctrlp.vim Plugin >>================================
+"---/ Ctrlp.vim Plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Exclude files or directories using Vim's wildignore
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-"==============================<< NERDTree  Setting >>================================
+"---/ NERDTree  Setting
 let NERDTreeShowHidden = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
@@ -116,22 +109,22 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 "--- Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"==========================[ NERDTree Syntax Highlight ]=============================
-"===[Disable Extension]
+"---/ NERDTree Syntax Highlight
+"---/ Disable Extension
 "let g:NERDTreeDisableFileExtensionHighlight = 1
 "let g:NERDTreeDisableExactMatchHighlight = 1
 "let g:NERDTreeDisablePatternMatchHighlight = 1
 
-"===[ Highlight full name (not only icons). You need to add this if you don't have vim-devicons and want highlight.
+"---/ Highlight full name (not only icons). You need to add this if you don't have vim-devicons and want highlight.
 "let g:NERDTreeFileExtensionHighlightFullName = 1 
 "let g:NERDTreeExactMatchHighlightFullName = 1
 "let g:NERDTreePatternMatchHighlightFullName = 1
 
-"===[ Highlight folders using exact match]
+"---/ Highlight folders using exact match
 "let g:NERDTreeHighlightFolders = 1	    " Enables folder icon highlighting using exact match
 "let g:NERDTreeHighlightFoldersFullName = 1 " Highlights the folder name
 
-"===[ Customizing Color ]
+"---/ Customizing Color
 "let g:NERDTreeSyntaxDisableDefaultExtensions = 1
 "let g:NERDTreeDisableExactMatchHighlight = 1
 "let g:NERDTreeDisablePatternMatchHighlight = 1
@@ -153,7 +146,7 @@ let g:NERDTreeExactMatchHighlightColor = {} " This line is needed to avoid error
 let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:vimrc " sets the color for .gitignore files
 let g:NERDTreeExactMatchHighlightColor['.vimrc'] = s:vimrc " sets the color for .vimrc files
 
-"==================================[ Devicons ]========================================
+"---/ Devicons
 let g:webdevicons_enable = 1                    " loading the plugin
 let g:webdevicons_enable_nerdtree = 1           " adding the flags to NERDTree
 let g:webdevicons_enable_unite = 1              " adding the custom source to unite
@@ -182,25 +175,25 @@ let g:WebDevIconsUnicodeDecorateFolderNodesExactMatches = 1
 let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
 let g:NERDTreeUpdateOnCursorHold = 1
 
-" Folder Icon
+"---/ Devicons: Folder Icon
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
 let g:DevIconsDefaultFolderOpenSymbol = ''
 
-" File Icons
+"---/ Devicons: File Icons
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['css'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
 
-"=====================================[ ALE ]========================================
-let g:ale_sign_error = ''
+"---/ ALE
+let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
 let g:airline#extensions#ale#enabled = 1    " use Vim-Airline statusline with ALE.
 
-"================================[ Vim-fugitive ]====================================
+"---/ Vim-fugitive
 set diffopt+=vertical
 
-"================================[ Vim-gitgutter ]===================================
+"---/ Vim-gitgutter
 set updatetime=100
 let g:gitgutter_max_signs = 500         "default value 500
 let g:gitgutter_sign_added              = '+'
@@ -209,14 +202,13 @@ let g:gitgutter_sign_removed            = '_'
 let g:gitgutter_sign_removed_first_line = '‾'
 let g:gitgutter_sign_modified_removed   = '~_'
 
-"=============================[ flazz Vim-Colorschemes ]=============================
+"---/ flazz Vim-Colorschemes
 colorscheme mimic " nord, tayra, fx, cake
 
-"================================[ Powerline Font ]==================================
-set guifont=SauceCodePro\ Nerd\ Font\ Mono:h9
+"---/ Powerline Font
 let g:Powerline_symbols = 'fancy'
 
-"===============================[ Vim Airline Theme ]================================
+"---/ Vim Airline Theme
 set t_Co=256
 let g:airline_theme='simple' "simple, powerlineish, papercolor, minimalist, luna
 let g:airline#extensions#tabline#enabled = 1
@@ -232,6 +224,7 @@ let g:airline_section_z = airline#section#create(['%3p%% ', "\uE0A1" . ' %{line(
 if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
+
 " unicode symbols
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
@@ -249,13 +242,15 @@ let g:airline_symbols.spell = '✓'
 let g:airline_symbols.notexists = '✗'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" airline symbols
-let g:airline_left_sep = "\uE0B0"	" ''
-let g:airline_left_alt_sep = "\uE0B1"	" ''
-let g:airline_right_sep = "\uE0B2"	" ''
-let g:airline_right_alt_sep = "\uE0B3"	" ''
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
+let g:airline_symbols.colnr = ' :'
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+let g:airline_symbols.linenr = ' :'
+let g:airline_symbols.maxlinenr = '☰ '
+let g:airline_symbols.dirty='⚡'
 
-"/////////////////////////////////// END Plugin Setting //////////////////////////////
