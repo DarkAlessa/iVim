@@ -41,6 +41,9 @@ set listchars=tab:\ ,eol:
 let g:termdebug_wide = 110
 let g:termdebug_popup = 0
 
+"---/ Key mapping
+imap jj <Esc>
+
 "---/ Vundle Plugins
 set rtp+=~/.vim/bundle/Vundle.vim      " set the runtime path to include Vundle and initialize
 call vundle#begin()
@@ -64,8 +67,8 @@ Plugin 'w0rp/ale'                   " Check syntax in Vim with Language Server P
 "---/ Color and Themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'flazz/vim-colorschemes'     " use // colorscheme + name of scheme // for change scheme
 Plugin 'powerline/powerline'
+Plugin 'flazz/vim-colorschemes'     " use // colorscheme + name of scheme // for change scheme
 Plugin 'ryanoasis/vim-devicons'     " Icon symbols : Must install Nerd-Font
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " nerdtree-syntax-highlight
 
@@ -83,11 +86,11 @@ endif
 
 "---/ Ctrlp.vim Plugin
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-" Exclude files or directories using Vim's wildignore
+"--- Exclude files or directories using Vim's wildignore
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " Linux/MacOSX
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-"---/ NERDTree  Setting
+"---/ NERDTree Setting
 let NERDTreeShowHidden = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
