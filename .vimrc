@@ -67,7 +67,6 @@ Plugin 'w0rp/ale'                   " Check syntax in Vim with Language Server P
 "---/ Color and Themes
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'powerline/powerline'
 Plugin 'flazz/vim-colorschemes'     " use // colorscheme + name of scheme // for change scheme
 Plugin 'ryanoasis/vim-devicons'     " Icon symbols : Must install Nerd-Font
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " nerdtree-syntax-highlight
@@ -207,9 +206,6 @@ let g:gitgutter_sign_modified_removed   = '~_'
 
 "---/ flazz Vim-Colorschemes
 colorscheme mimic " nord, tayra, fx, cake
-
-"---/ Powerline Font
-let g:Powerline_symbols = 'fancy'
 
 "---/ Vim Airline Theme
 set t_Co=256
