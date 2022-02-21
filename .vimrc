@@ -52,7 +52,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'       " Let Vundle manage Vundle, required
 Plugin 'airblade/vim-gitgutter'     " Shows a git diff in the 'gutter' (sign column).
 Plugin 'scrooloose/nerdtree'        " NERDTree
-Plugin 'scrooloose/syntastic'       " Syntax checking hacks for vim
 Plugin 'scrooloose/nerdcommenter'   " Vim plugin for intensely orgasmic commenting
 Plugin 'tpope/vim-fugitive'         " A Git wrapper
 Plugin 'tpope/vim-surround'
