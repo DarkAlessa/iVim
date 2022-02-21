@@ -94,6 +94,7 @@ set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 let NERDTreeShowHidden = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeChDirMode = 2
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
@@ -190,7 +191,8 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
 "---/ ALE
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
-let g:airline#extensions#ale#enabled = 1    " use Vim-Airline statusline with ALE.
+let g:airline#extensions#ale#enabled = 1    " Use Vim-Airline statusline with ALE.
+let g:ale_completion_enabled = 1            " Enable completion
 
 "---/ Vim-fugitive
 set diffopt+=vertical
