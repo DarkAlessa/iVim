@@ -133,17 +133,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "let g:NERDTreeDisablePatternMatchHighlight = 1
 "let g:NERDTreeSyntaxEnabledExtensions = ['c', 'h', 'c++', 'php', 'rb', 'js', 'css', 'sh']
 
-let s:blue = "689FB6"
-let s:red = "AE403F"
-let s:yellow = "F09F17"
-let s:pink = "CB6F6F"
-let s:green = "00FF00"
-let s:vimrc = "00FF7F"
+let s:cpp       = "F09F17"
+let s:header    = "93C47D"
+let s:sh        = "6FA8DC"
+let s:vimrc     = "00FF7F"
 
 let g:NERDTreeExtensionHighlightColor = {} " This line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor['cpp'] = s:yellow
-let g:NERDTreeExtensionHighlightColor['h'] = s:green
-let g:NERDTreeExtensionHighlightColor['sh'] = s:green
+let g:NERDTreeExtensionHighlightColor['cpp'] = s:cpp
+let g:NERDTreeExtensionHighlightColor['h'] = s:header
+let g:NERDTreeExtensionHighlightColor['sh'] = s:sh
 
 let g:NERDTreeExactMatchHighlightColor = {} " This line is needed to avoid error
 let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:vimrc " sets the color for .gitignore files
@@ -187,6 +185,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {}
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['css'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['md'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['exe'] = ''
 
 "---/ ALE
 let g:ale_sign_error = ''
