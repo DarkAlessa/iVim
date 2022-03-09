@@ -82,7 +82,7 @@ if has("gui_running")
     if has("x11")
         set guifont=SauceCodepro\ NF:h9
     elseif has("gui_win32")
-        set guifont=SauceCodePro\ NF:h9
+        set guifont=SauceCodepro\ NF:h9:cANSI
     endif
 endif
 
