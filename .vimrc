@@ -80,9 +80,9 @@ if has("gui_running")
     set guioptions -=r "Disable Right-hand scroll bar
     set guioptions -=L "Disable Left-hand scroll bar
     if has("x11")
-        set guifont=SauceCodepro\ NF:h9
+        set guifont=SauceCodePro\ NF:h9
     elseif has("gui_win32")
-        set guifont=SauceCodepro\ NF:h9:cANSI
+        set guifont=SauceCodePro\ NF:h9:W500:cANSI
     endif
 endif
 
