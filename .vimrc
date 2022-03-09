@@ -79,7 +79,11 @@ if has("gui_running")
     set guioptions -=T "Disable Tool bar
     set guioptions -=r "Disable Right-hand scroll bar
     set guioptions -=L "Disable Left-hand scroll bar
-    set guifont=SauceCodePro\ Nerd\ Font\ Mono:h9
+    if has("x11")
+        set guifont=SauceCodepro\ NF:h9
+    elseif has("gui_win32")
+        set guifont=SauceCodePro\ NF:h9
+    endif
 endif
 
 "---/ Ctrlp.vim Plugin
